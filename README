@@ -1,65 +1,89 @@
-📱 WhatsApp Clone – Synchronus-RealTimeChatApp
-A full-stack real-time chat application built with the MERN stack and Socket.io, designed to replicate core features of WhatsApp including instant messaging, contact list, and session-based authentication.
+📱 Synchronous ChatApp
 
-🚀 Features
+A real-time MERN chat application I built to explore Socket.io, authentication flows, and modern UI design. The goal was to recreate a WhatsApp-style chatting experience with instant messaging, clean visuals, and smooth state handling.
 
-🔐 Authentication & Security – Secure login/signup with JWT & cookie-based session management
+🔗 Frontend: https://synchronous-chatapp.vercel.app
 
-💬 Real-time Messaging – Built with Socket.io for instant delivery of messages
+🔗 Backend: https://synchronous-chatapp-3npb.onrender.com
 
-📇 Contact Management – Dynamic contacts list with recent chats and last messages
+🚀 What I built
 
-🗄️ Efficient Data Handling – Used MongoDB aggregation pipelines for optimized queries
+Secure login/signup using JWT + cookies
 
-🎨 Modern UI – Built with Tailwind CSS + Shadcn/UI for responsive and clean design
+Real-time one-to-one messaging (Socket.io)
 
-🔔 Enhanced UX – Added Lucide-React icons, Lottie animations, and human-readable timestamps with Moment.js
+Contact list with last message preview
 
-⚡ State Management – API caching and data fetching with RTK Query/Axios for UploadFile,DowndloadFile, ContextApi for SocketIo
+File & media upload (profile pictures + attachments)
 
+Channel/group chat support
 
-🛠️ Tech Stack
-Frontend:
-React.js
-Tailwind CSS
-Shadcn/UI / Shadcn/expansion
-Lucide-React
-Lottie Animations
-Redux 
-contextApi
-Axios
+Responsive UI with Tailwind + Shadcn
 
-Backend:
-Node.js
-Express.js
-Socket.io
-JWT Authentication
+Readable timestamps, icons, animations, and smooth transitions
 
-Database:
-MongoDB (with Aggregation Pipelines)
+MongoDB aggregation for efficient data fetching
 
+Socket-based user presence tracking
 
-⚙️ Installation & Setup
+🧰 Tech I used
+Frontend
 
+React, Tailwind CSS, Shadcn/UI, Redux Toolkit, Context API, RTK Query, Axios, Lottie, Lucide-react
 
-🔹 Backend Setup
+Backend
+
+Node.js, Express.js, Socket.io, JWT, Cookie-parser, CORS
+
+Database
+
+MongoDB Atlas (with aggregation pipelines)
+
+⚙️ Local Setup
+Backend
 cd server
 npm install
-nodemon server.js
+npm start
 
-🔹 Frontend Setup
+
+Environment:
+
+JWT_KEY=your_key
+MONGO_URL=your_mongo_url
+ORIGIN=http://localhost:5173
+
+Frontend
 cd client
 npm install
 npm run dev
 
 
-🤝 Contributing
+Environment:
 
-Contributions, issues, and feature requests are welcome!
-Feel free to open an issue or submit a pull request.
+VITE_SERVER_URL=http://localhost:8747
 
-👨‍💻 Author
-Muhammad Fahad Zaman
-Full Stack Developer (MERN + ERP)
+🌐 Deployment (My Setup)
+Frontend → Vercel
+
+Environment variable:
+
+VITE_SERVER_URL=https://synchronous-chatapp-3npb.onrender.com
 
 
+SPA routing handled with:
+
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
+
+Backend → Render
+JWT_KEY=...
+MONGO_URL=...
+ORIGIN=https://synchronous-chatapp.vercel.app
+
+✨ Author
+
+Sarthak Gupta
+Built with MERN + real-time sockets while learning and experimenting with full-stack development.
